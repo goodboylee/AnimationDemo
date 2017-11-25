@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jRa-Qc-wlC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="Bes-R0-haz">
+            <objects>
+                <tableViewController id="TnK-Wh-MyO" customClass="MainTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3G5-ob-Dai">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" id="E7u-9e-YjM">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E7u-9e-YjM" id="yMe-i3-IhT">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="mg7-fg-TAb" kind="show" id="HNG-A1-xYC"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="TnK-Wh-MyO" id="tGa-65-pB2"/>
+                            <outlet property="delegate" destination="TnK-Wh-MyO" id="8Dp-q4-1Gv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="9u5-oi-oRI"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6td-J1-TyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="442" y="124"/>
+        </scene>
+        <!--Animation View Controller-->
+        <scene sceneID="gRx-Kt-9gc">
+            <objects>
+                <viewController storyboardIdentifier="AnimationViewController" id="mg7-fg-TAb" customClass="AnimationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yde-yQ-NDB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="15t-xU-Gy2">
+                                <rect key="frame" x="10" y="74" width="355" height="140"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="odV-1m-FnU">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="41.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJY-w7-50m">
+                                                <rect key="frame" x="0.0" y="0.0" width="173.5" height="41.5"/>
+                                                <color key="backgroundColor" red="0.63917887520000005" green="0.89143577900000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="继续动画"/>
+                                                <connections>
+                                                    <action selector="animationTypeAction:" destination="mg7-fg-TAb" eventType="touchUpInside" id="OZa-pb-oHa"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMB-wm-tY9">
+                                                <rect key="frame" x="181.5" y="0.0" width="173.5" height="41.5"/>
+                                                <color key="backgroundColor" red="0.63917887520000005" green="0.89143577900000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="暂停动画"/>
+                                                <connections>
+                                                    <action selector="animationTypeAction:" destination="mg7-fg-TAb" eventType="touchUpInside" id="4GO-9F-XAv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oiR-Pp-AUh">
+                                        <rect key="frame" x="0.0" y="49.5" width="355" height="41"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9s-Dx-ZXW">
+                                                <rect key="frame" x="0.0" y="0.0" width="83" height="41"/>
+                                                <color key="backgroundColor" red="0.63917887520000005" green="0.89143577900000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="基础平移"/>
+                                                <connections>
+                                                    <action selector="animationTypeAction:" destination="mg7-fg-TAb" eventType="touchUpInside" id="uC4-ri-tGP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0VF-t4-cuJ">
+                                                <rect key="frame" x="91" y="0.0" width="82.5" height="41"/>
+                                                <color key="backgroundColor" red="0.63917887520000005" green="0.89143577900000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="绕中心旋转"/>
+                                                <connections>
+                                                    <action selector="animationTypeAction:" destination="mg7-fg-TAb" eventType="touchUpInside" id="YUA-4H-CDC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xo9-Vt-gcT">
+                                                <rect key="frame" x="181.5" y="0.0" width="83" height="41"/>
+                                                <color key="backgroundColor" red="0.63917887520000005" green="0.89143577900000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="路径旋转"/>
+                                                <connections>
+                                                    <action selector="animationTypeAction:" destination="mg7-fg-TAb" eventType="touchUpInside" id="kDd-Qp-fxu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFV-Nu-WLq">
+                                                <rect key="frame" x="272.5" y="0.0" width="82.5" height="41"/>
+                                                <color key="backgroundColor" red="0.63917887520000005" green="0.89143577900000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="组合动画"/>
+                                                <connections>
+                                                    <action selector="animationTypeAction:" destination="mg7-fg-TAb" eventType="touchUpInside" id="Wsf-rl-ilD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7Wb-Ke-hIg">
+                                        <rect key="frame" x="0.0" y="98.5" width="355" height="41.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wz5-9f-nYf">
+                                                <rect key="frame" x="0.0" y="0.0" width="113" height="41.5"/>
+                                                <color key="backgroundColor" red="0.63917887520000005" green="0.89143577900000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="帧动画"/>
+                                                <connections>
+                                                    <action selector="animationTypeAction:" destination="mg7-fg-TAb" eventType="touchUpInside" id="xm5-dx-GEM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiU-Pf-OTB">
+                                                <rect key="frame" x="121" y="0.0" width="113" height="41.5"/>
+                                                <color key="backgroundColor" red="0.63917887520000005" green="0.89143577900000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="弹簧动画"/>
+                                                <connections>
+                                                    <action selector="animationTypeAction:" destination="mg7-fg-TAb" eventType="touchUpInside" id="CBc-zZ-LUX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwQ-tI-uKN">
+                                                <rect key="frame" x="242" y="0.0" width="113" height="41.5"/>
+                                                <color key="backgroundColor" red="0.63917887520000005" green="0.89143577900000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="one by one"/>
+                                                <connections>
+                                                    <action selector="animationTypeAction:" destination="mg7-fg-TAb" eventType="touchUpInside" id="Gjh-uq-q7i"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="ZGd-11-GZU"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMv-It-dRE">
+                                <rect key="frame" x="167.5" y="567" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="03K-8V-TV8"/>
+                                    <constraint firstAttribute="height" constant="40" id="rc9-bh-gK5"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="rocket"/>
+                                <connections>
+                                    <action selector="beginAnimation:" destination="mg7-fg-TAb" eventType="touchUpInside" id="BRO-VN-efK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xkG-Hr-qFR" firstAttribute="trailing" secondItem="15t-xU-Gy2" secondAttribute="trailing" constant="10" id="88U-Xy-zEW"/>
+                            <constraint firstItem="IMv-It-dRE" firstAttribute="centerX" secondItem="yde-yQ-NDB" secondAttribute="centerX" id="Ihu-gb-m2N"/>
+                            <constraint firstItem="15t-xU-Gy2" firstAttribute="leading" secondItem="xkG-Hr-qFR" secondAttribute="leading" constant="10" id="UCV-XN-70r"/>
+                            <constraint firstItem="xkG-Hr-qFR" firstAttribute="bottom" secondItem="IMv-It-dRE" secondAttribute="bottom" constant="60" id="zAm-9C-hEL"/>
+                            <constraint firstItem="15t-xU-Gy2" firstAttribute="top" secondItem="xkG-Hr-qFR" secondAttribute="top" constant="10" id="zou-Ei-ccb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xkG-Hr-qFR"/>
+                    </view>
+                    <connections>
+                        <outlet property="animationView" destination="IMv-It-dRE" id="7nJ-nG-aFM"/>
+                        <outlet property="centerRotateBtn" destination="0VF-t4-cuJ" id="NcG-gJ-S48"/>
+                        <outlet property="pathRotateBtn" destination="xo9-Vt-gcT" id="sYa-WD-Hig"/>
+                        <outlet property="translationBtn" destination="p9s-Dx-ZXW" id="Wzx-zb-fcN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SmH-Lr-g66" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1140" y="130.88455772113943"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YVk-6J-vcB">
+            <objects>
+                <navigationController id="jRa-Qc-wlC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J9z-El-612">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TnK-Wh-MyO" kind="relationship" relationship="rootViewController" id="bcV-uQ-FyO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TEK-oy-v4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-510" y="124"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rocket" width="40" height="40"/>
+    </resources>
+</document>
