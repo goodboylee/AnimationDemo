@@ -62,19 +62,19 @@ static NSString *const cellIdentifier = @"cellIdentifier";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    AnimationViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AnimationViewController"];
+//    AnimationViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AnimationViewController"];
     
-    //转场动画
-    CATransition *transition = [CATransition animation];
-    
-    //切换其他值试下效果
-    transition.type = kCATransitionReveal;
-    
-    //打开这个玩玩
-//    transition.subtype = kCATransitionFromTop;
-    transition.duration = 0.25;
-    [self.navigationController.view.layer addAnimation:transition forKey:nil];
-    [self.navigationController pushViewController:vc animated:NO];
+//    //转场动画
+//    CATransition *transition = [CATransition animation];
+//
+//    //切换其他值试下效果
+//    transition.type = kCATransitionReveal;
+//
+//    //打开这个玩玩
+////    transition.subtype = kCATransitionFromTop;
+//    transition.duration = 0.25;
+//    [self.navigationController.view.layer addAnimation:transition forKey:nil];
+//    [self.navigationController pushViewController:vc animated:NO];
 }
 
 #pragma mark - Navigation
