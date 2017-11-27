@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,9 +28,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="mg7-fg-TAb" kind="show" id="HNG-A1-xYC"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -43,6 +41,63 @@
             </objects>
             <point key="canvasLocation" x="442" y="124"/>
         </scene>
+        <!--Shaper View Controller-->
+        <scene sceneID="0KQ-Rt-k5n">
+            <objects>
+                <viewController storyboardIdentifier="ShaperViewController" id="N2f-vO-8VM" customClass="ShaperViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B2H-d9-wtv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Q7b-YE-Ys0">
+                                <rect key="frame" x="10" y="30" width="355" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNP-CS-FRU">
+                                        <rect key="frame" x="0.0" y="0.0" width="173.5" height="40"/>
+                                        <color key="backgroundColor" red="0.63917887520000005" green="0.89143577900000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="way 1"/>
+                                        <connections>
+                                            <action selector="btnAction:" destination="N2f-vO-8VM" eventType="touchUpInside" id="X0I-XS-WmL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biC-nE-jpF">
+                                        <rect key="frame" x="181.5" y="0.0" width="173.5" height="40"/>
+                                        <color key="backgroundColor" red="0.63917887520000005" green="0.89143577900000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="way 2"/>
+                                        <connections>
+                                            <action selector="btnAction:" destination="N2f-vO-8VM" eventType="touchUpInside" id="JT7-01-MDq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="zg3-sN-pqA"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VrO-XM-ymo" customClass="DiagramView">
+                                <rect key="frame" x="0.0" y="343.5" width="375" height="323.5"/>
+                                <color key="backgroundColor" red="1" green="0.99947337377821277" blue="0.7792748168745498" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VrO-XM-ymo" firstAttribute="leading" secondItem="sZ0-RX-ysY" secondAttribute="leading" id="3aT-Zg-vxy"/>
+                            <constraint firstItem="VrO-XM-ymo" firstAttribute="height" secondItem="sZ0-RX-ysY" secondAttribute="height" multiplier="0.5" id="5tI-14-faX"/>
+                            <constraint firstItem="Q7b-YE-Ys0" firstAttribute="leading" secondItem="sZ0-RX-ysY" secondAttribute="leading" constant="10" id="7Pn-lG-m3L"/>
+                            <constraint firstItem="Q7b-YE-Ys0" firstAttribute="top" secondItem="sZ0-RX-ysY" secondAttribute="top" constant="10" id="8Uf-0x-3r6"/>
+                            <constraint firstItem="sZ0-RX-ysY" firstAttribute="trailing" secondItem="VrO-XM-ymo" secondAttribute="trailing" id="V3V-51-BI8"/>
+                            <constraint firstItem="sZ0-RX-ysY" firstAttribute="bottom" secondItem="VrO-XM-ymo" secondAttribute="bottom" id="k5Z-kE-xv1"/>
+                            <constraint firstItem="sZ0-RX-ysY" firstAttribute="trailing" secondItem="Q7b-YE-Ys0" secondAttribute="trailing" constant="10" id="tLV-1a-hpO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sZ0-RX-ysY"/>
+                    </view>
+                    <connections>
+                        <outlet property="diagramView" destination="VrO-XM-ymo" id="uK3-dd-DKL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9qa-Fh-n42" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1174" y="601"/>
+        </scene>
         <!--Animation View Controller-->
         <scene sceneID="gRx-Kt-9gc">
             <objects>
@@ -52,7 +107,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="15t-xU-Gy2">
-                                <rect key="frame" x="10" y="74" width="355" height="140"/>
+                                <rect key="frame" x="10" y="30" width="355" height="140"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="odV-1m-FnU">
                                         <rect key="frame" x="0.0" y="0.0" width="355" height="41.5"/>
@@ -177,7 +232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SmH-Lr-g66" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1140" y="130.88455772113943"/>
+            <point key="canvasLocation" x="1175" y="-62"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YVk-6J-vcB">

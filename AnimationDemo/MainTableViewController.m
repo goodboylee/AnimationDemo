@@ -8,6 +8,7 @@
 
 #import "MainTableViewController.h"
 #import "AnimationViewController.h"
+#import "ShaperViewController.h"
 
 
 static NSString *const cellIdentifier = @"cellIdentifier";
@@ -33,7 +34,7 @@ static NSString *const cellIdentifier = @"cellIdentifier";
 }
 
 - (void)initData{
-    self.dataSource = @[@"基础动画"];
+    self.dataSource = @[@"基础动画", @"CAShaperLayer USE"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,19 +63,36 @@ static NSString *const cellIdentifier = @"cellIdentifier";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    AnimationViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AnimationViewController"];
     
-//    //转场动画
-//    CATransition *transition = [CATransition animation];
-//
-//    //切换其他值试下效果
-//    transition.type = kCATransitionReveal;
-//
-//    //打开这个玩玩
-////    transition.subtype = kCATransitionFromTop;
-//    transition.duration = 0.25;
-//    [self.navigationController.view.layer addAnimation:transition forKey:nil];
-//    [self.navigationController pushViewController:vc animated:NO];
+    if (indexPath.row == 0) {
+        [self pushToBasicAnimationVC];
+    }else if (indexPath.row == 1){
+        [self pushToShaperVC];
+    }
+    
+}
+
+
+#pragma mark - private methods
+- (void)pushToBasicAnimationVC{
+    AnimationViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AnimationViewController"];
+    
+    //转场动画
+    CATransition *transition = [CATransition animation];
+    
+    //切换其他值试下效果
+    transition.type = kCATransitionFade;
+    
+    //打开这个玩玩
+    //    transition.subtype = kCATransitionFromTop;
+    transition.duration = 0.25;
+    [self.navigationController.view.layer addAnimation:transition forKey:nil];
+    [self.navigationController pushViewController:vc animated:NO];
+}
+
+- (void)pushToShaperVC{
+    ShaperViewController *vc =[self.storyboard instantiateViewControllerWithIdentifier:@"ShaperViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - Navigation
