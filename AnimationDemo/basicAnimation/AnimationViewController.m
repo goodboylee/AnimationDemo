@@ -48,6 +48,7 @@ typedef NS_ENUM(NSInteger, AnimationType){
     
     self.title = @"基础动画";
     _animationType = -1;
+    
 }
 
 #pragma mark - event methods
