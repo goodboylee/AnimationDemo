@@ -110,7 +110,7 @@
     [path moveToPoint:CGPointMake(startX, maxY)];
     [path addLineToPoint:CGPointMake(startX, maxY - 80)];
         
-        
+    
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
     shapeLayer.frame = self.bounds;
     shapeLayer.path = path.CGPath;

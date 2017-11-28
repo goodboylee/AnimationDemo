@@ -9,6 +9,7 @@
 #import "MainTableViewController.h"
 #import "AnimationViewController.h"
 #import "ShaperViewController.h"
+#import "GradientViewController.h"
 
 
 static NSString *const cellIdentifier = @"cellIdentifier";
@@ -34,7 +35,7 @@ static NSString *const cellIdentifier = @"cellIdentifier";
 }
 
 - (void)initData{
-    self.dataSource = @[@"基础动画", @"CAShaperLayer USE"];
+    self.dataSource = @[@"基础动画", @"CAShaperLayer USE", @"CAGradientLayer USE"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,8 +69,10 @@ static NSString *const cellIdentifier = @"cellIdentifier";
         [self pushToBasicAnimationVC];
     }else if (indexPath.row == 1){
         [self pushToShaperVC];
+    }else if (indexPath.row == 2){
+        [self pushToGradientVC];
     }
-    
+        
 }
 
 
@@ -95,6 +98,10 @@ static NSString *const cellIdentifier = @"cellIdentifier";
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (void)pushToGradientVC{
+    GradientViewController *vc =[self.storyboard instantiateViewControllerWithIdentifier:@"GradientViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation

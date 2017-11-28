@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD1DB7071FCD5AFA00791801 /* GradientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1DB7061FCD5AFA00791801 /* GradientViewController.m */; };
+		AD1DB70A1FCD7E1000791801 /* GradientNExtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1DB7091FCD7E0F00791801 /* GradientNExtViewController.m */; };
 		AD27B80C1FCBA41B003270B4 /* DiagramView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD27B80B1FCBA41B003270B4 /* DiagramView.m */; };
 		AD27B80F1FCBA95B003270B4 /* ShaperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD27B80E1FCBA95B003270B4 /* ShaperViewController.m */; };
 		AD464E091FA1B92500A81714 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD464E081FA1B92500A81714 /* AppDelegate.m */; };
@@ -20,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD1DB7051FCD5AFA00791801 /* GradientViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientViewController.h; sourceTree = "<group>"; };
+		AD1DB7061FCD5AFA00791801 /* GradientViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientViewController.m; sourceTree = "<group>"; };
+		AD1DB7081FCD7E0F00791801 /* GradientNExtViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientNExtViewController.h; sourceTree = "<group>"; };
+		AD1DB7091FCD7E0F00791801 /* GradientNExtViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientNExtViewController.m; sourceTree = "<group>"; };
 		AD27B80A1FCBA41B003270B4 /* DiagramView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiagramView.h; sourceTree = "<group>"; };
 		AD27B80B1FCBA41B003270B4 /* DiagramView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiagramView.m; sourceTree = "<group>"; };
 		AD27B80D1FCBA95B003270B4 /* ShaperViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaperViewController.h; sourceTree = "<group>"; };
@@ -50,6 +56,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD1DB7031FCCE94200791801 /* CAGradientLayer */ = {
+			isa = PBXGroup;
+			children = (
+				AD1DB7051FCD5AFA00791801 /* GradientViewController.h */,
+				AD1DB7061FCD5AFA00791801 /* GradientViewController.m */,
+				AD1DB7081FCD7E0F00791801 /* GradientNExtViewController.h */,
+				AD1DB7091FCD7E0F00791801 /* GradientNExtViewController.m */,
+			);
+			path = CAGradientLayer;
+			sourceTree = "<group>";
+		};
 		AD27B8091FCBA3D6003270B4 /* CAShapeLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +102,7 @@
 				AD464E081FA1B92500A81714 /* AppDelegate.m */,
 				AD464E1D1FA1B94D00A81714 /* MainTableViewController.h */,
 				AD464E1E1FA1B94D00A81714 /* MainTableViewController.m */,
+				AD1DB7031FCCE94200791801 /* CAGradientLayer */,
 				AD27B8091FCBA3D6003270B4 /* CAShapeLayer */,
 				AD464E201FA1BB2100A81714 /* basicAnimation */,
 				AD464E0D1FA1B92500A81714 /* Main.storyboard */,
@@ -177,8 +195,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD1DB7071FCD5AFA00791801 /* GradientViewController.m in Sources */,
 				AD464E171FA1B92500A81714 /* main.m in Sources */,
 				AD27B80C1FCBA41B003270B4 /* DiagramView.m in Sources */,
+				AD1DB70A1FCD7E1000791801 /* GradientNExtViewController.m in Sources */,
 				AD464E091FA1B92500A81714 /* AppDelegate.m in Sources */,
 				AD27B80F1FCBA95B003270B4 /* ShaperViewController.m in Sources */,
 				AD464E1F1FA1B94D00A81714 /* MainTableViewController.m in Sources */,

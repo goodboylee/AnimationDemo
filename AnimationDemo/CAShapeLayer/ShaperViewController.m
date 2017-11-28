@@ -22,12 +22,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self initViews];
 }
 
+- (void)initViews{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 114, 150, 150)];
+    
+    [self.view addSubview:view];
+    
+}
 
 - (IBAction)btnAction:(UIButton *)sender {
     
-//    [_diagramView addDiagram:YES];
     NSInteger tag = sender.tag;
     if (tag == 0) {
         [_diagramView addDiagram:YES];
