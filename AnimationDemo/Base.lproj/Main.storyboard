@@ -417,13 +417,13 @@
                                     <constraint firstAttribute="width" constant="100" id="SkK-sk-gFK"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m5T-vp-xS1" userLabel="bgImageview">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="m5T-vp-xS1" userLabel="bgImageview">
                                 <rect key="frame" x="10" y="457" width="355" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="09t-Nd-UDW"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vLn-sC-vaJ" userLabel="frontImageview">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vLn-sC-vaJ" userLabel="frontImageview">
                                 <rect key="frame" x="10" y="457" width="355" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="e0s-5h-98P"/>
@@ -444,12 +444,55 @@
                         <viewLayoutGuide key="safeArea" id="skW-b8-Kxw"/>
                     </view>
                     <connections>
+                        <outlet property="bgImageview" destination="m5T-vp-xS1" id="96A-fc-ZoH"/>
                         <outlet property="circleView" destination="Lbb-0L-gAE" id="ZeS-vP-oT0"/>
+                        <outlet property="frontImageview" destination="vLn-sC-vaJ" id="Zoa-ET-VLf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ho-eu-0kB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2876" y="650"/>
+        </scene>
+        <!--Gradient Last View Controller-->
+        <scene sceneID="7MR-8b-ZZm">
+            <objects>
+                <viewController storyboardIdentifier="GradientLastViewController" id="iHd-rZ-2yJ" customClass="GradientLastViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p3i-iN-oBd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wyx-0r-wud" userLabel="bgImageview">
+                                <rect key="frame" x="10" y="457" width="355" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="0Ft-E9-00p"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mw7-fh-NNC" userLabel="frontImageview">
+                                <rect key="frame" x="10" y="457" width="355" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="0qN-zK-jFk"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BR0-RV-QeY" firstAttribute="bottom" secondItem="mw7-fh-NNC" secondAttribute="bottom" constant="10" id="0fQ-45-6eA"/>
+                            <constraint firstItem="BR0-RV-QeY" firstAttribute="bottom" secondItem="wyx-0r-wud" secondAttribute="bottom" constant="10" id="TfO-As-0jD"/>
+                            <constraint firstItem="BR0-RV-QeY" firstAttribute="trailing" secondItem="wyx-0r-wud" secondAttribute="trailing" constant="10" id="U02-B3-zgm"/>
+                            <constraint firstItem="wyx-0r-wud" firstAttribute="leading" secondItem="BR0-RV-QeY" secondAttribute="leading" constant="10" id="eMV-nn-Qtx"/>
+                            <constraint firstItem="BR0-RV-QeY" firstAttribute="trailing" secondItem="mw7-fh-NNC" secondAttribute="trailing" constant="10" id="qcy-FG-nHI"/>
+                            <constraint firstItem="mw7-fh-NNC" firstAttribute="leading" secondItem="BR0-RV-QeY" secondAttribute="leading" constant="10" id="vUT-fD-STB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BR0-RV-QeY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bgImageview" destination="wyx-0r-wud" id="dVn-Yh-jql"/>
+                        <outlet property="frontImageview" destination="mw7-fh-NNC" id="sow-yP-uIR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9od-Vj-LzV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3638" y="648"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YVk-6J-vcB">
@@ -469,6 +512,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1.jpg" width="500" height="333"/>
+        <image name="2.jpg" width="500" height="313"/>
         <image name="beauty" width="200" height="200"/>
         <image name="rocket" width="40" height="40"/>
     </resources>

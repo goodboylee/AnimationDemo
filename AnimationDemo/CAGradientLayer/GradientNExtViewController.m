@@ -7,13 +7,20 @@
 //
 
 #import "GradientNExtViewController.h"
+#import "GradientLastViewController.h"
 
 static NSInteger const circleDuarationTime = 1;
 
 @interface GradientNExtViewController ()
-
+{
+    CAGradientLayer *_leftGradientLayer;
+    CAGradientLayer *_rightGradientLayer;
+}
 
 @property (weak, nonatomic) IBOutlet UIView *circleView;
+@property (weak, nonatomic) IBOutlet UIImageView *bgImageview;
+@property (weak, nonatomic) IBOutlet UIImageView *frontImageview;
+
 @end
 
 @implementation GradientNExtViewController
@@ -21,14 +28,29 @@ static NSInteger const circleDuarationTime = 1;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self initViews];
     [self configureLayerForCircleView];
+    [self configureLayerForFrontImageview];
+}
+
+- (void)initViews{
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(nextVC)];
+    self.navigationItem.rightBarButtonItem = item;
 }
 
 - (void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
     
-    
+    _leftGradientLayer.frame = CGRectMake(0, 0, _frontImageview.bounds.size.width / 2, _frontImageview.bounds.size.height * 3);
+    _rightGradientLayer.frame = CGRectMake(_frontImageview.bounds.size.width / 2, 0, _frontImageview.bounds.size.width / 2, _frontImageview.bounds.size.height * 3);
 }
+
+#pragma mark - event methods
+- (void)nextVC{
+    GradientLastViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"GradientLastViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 - (void)configureLayerForCircleView{
     
@@ -68,6 +90,60 @@ static NSInteger const circleDuarationTime = 1;
     }];
 }
 
+- (void)configureLayerForFrontImageview{
+    
+    //1. add a mask to front image view
+    CALayer *maskLayer = [CALayer layer];
+    maskLayer.frame = _frontImageview.bounds;
+    maskLayer.backgroundColor = [UIColor clearColor].CGColor;
+    _frontImageview.layer.mask = maskLayer;
+    
+    //add the left side layer to the mask layer
+    _leftGradientLayer = [CAGradientLayer layer];
+    _leftGradientLayer.frame = CGRectMake(0, 0, _frontImageview.bounds.size.width / 2, _frontImageview.bounds.size.height * 3);
+    _leftGradientLayer.colors = @[(id)[UIColor clearColor].CGColor, (id)[UIColor blackColor].CGColor];
+    _leftGradientLayer.locations = @[@(0.4), @(0.5)];
+    [maskLayer addSublayer:_leftGradientLayer];
+    
+    //add the right side layer to the mask layer
+    _rightGradientLayer = [CAGradientLayer layer];
+    _rightGradientLayer.frame = CGRectMake(_frontImageview.bounds.size.width / 2, 0, _frontImageview.bounds.size.width / 2, _frontImageview.bounds.size.height * 3);
+    _rightGradientLayer.colors = @[(id)[UIColor clearColor].CGColor, (id)[UIColor blackColor].CGColor];
+    _rightGradientLayer.locations = @[@(0.4), @(0.5)];
+    [maskLayer addSublayer:_rightGradientLayer];
+    
+    //animation to show bg image view
+    [self showBgImage];
+}
+
+- (void)showBgImage{
+    
+    [NSTimer scheduledTimerWithTimeInterval:circleDuarationTime repeats:NO block:^(NSTimer * _Nonnull timer) {
+        
+        CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
+        animation.toValue = [NSValue valueWithCGPoint:CGPointMake(_leftGradientLayer.position.x, _leftGradientLayer.position.y - _leftGradientLayer.bounds.size.height * 0.5)];
+        animation.duration = circleDuarationTime;
+        
+        //keep the animation last state
+        animation.fillMode = kCAFillModeForwards;
+        animation.removedOnCompletion = NO;
+        
+        [_leftGradientLayer addAnimation:animation forKey:nil];
+    }];
+    
+    [NSTimer scheduledTimerWithTimeInterval:circleDuarationTime + 2 repeats:NO block:^(NSTimer * _Nonnull timer) {
+        
+        CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
+        animation.toValue = [NSValue valueWithCGPoint:CGPointMake(_rightGradientLayer.position.x, _rightGradientLayer.position.y - _rightGradientLayer.bounds.size.height * 0.5)];
+        animation.duration = circleDuarationTime;
+        
+        //keep the animation last state
+        animation.fillMode = kCAFillModeForwards;
+        animation.removedOnCompletion = NO;
+        
+        [_rightGradientLayer addAnimation:animation forKey:nil];
+    }];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -20,6 +20,9 @@
 		AD464E231FA1BBCF00A81714 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD464E221FA1BBCF00A81714 /* AnimationViewController.m */; };
 		AD54E4171FC842D300EA2545 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AD54E4161FC842D300EA2545 /* README.md */; };
 		AD55D1F01FCEAF15008AB9A1 /* GradientExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD55D1EF1FCEAF15008AB9A1 /* GradientExampleViewController.m */; };
+		AD55D1F31FCECD78008AB9A1 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD55D1F11FCECD77008AB9A1 /* 1.jpg */; };
+		AD55D1F41FCECD78008AB9A1 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD55D1F21FCECD77008AB9A1 /* 2.jpg */; };
+		AD55D1F71FCED27B008AB9A1 /* GradientLastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD55D1F61FCED27B008AB9A1 /* GradientLastViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,10 @@
 		AD54E4161FC842D300EA2545 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AD55D1EE1FCEAF15008AB9A1 /* GradientExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientExampleViewController.h; sourceTree = "<group>"; };
 		AD55D1EF1FCEAF15008AB9A1 /* GradientExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientExampleViewController.m; sourceTree = "<group>"; };
+		AD55D1F11FCECD77008AB9A1 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpg; path = ../../../../../../Desktop/1.jpg; sourceTree = "<group>"; };
+		AD55D1F21FCECD77008AB9A1 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2.jpg; path = ../../../../../../Desktop/2.jpg; sourceTree = "<group>"; };
+		AD55D1F51FCED27B008AB9A1 /* GradientLastViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientLastViewController.h; sourceTree = "<group>"; };
+		AD55D1F61FCED27B008AB9A1 /* GradientLastViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientLastViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +75,8 @@
 				AD1DB7091FCD7E0F00791801 /* GradientNExtViewController.m */,
 				AD55D1EE1FCEAF15008AB9A1 /* GradientExampleViewController.h */,
 				AD55D1EF1FCEAF15008AB9A1 /* GradientExampleViewController.m */,
+				AD55D1F51FCED27B008AB9A1 /* GradientLastViewController.h */,
+				AD55D1F61FCED27B008AB9A1 /* GradientLastViewController.m */,
 			);
 			path = CAGradientLayer;
 			sourceTree = "<group>";
@@ -115,6 +124,8 @@
 				AD464E121FA1B92500A81714 /* LaunchScreen.storyboard */,
 				AD464E151FA1B92500A81714 /* Info.plist */,
 				AD464E161FA1B92500A81714 /* main.m */,
+				AD55D1F11FCECD77008AB9A1 /* 1.jpg */,
+				AD55D1F21FCECD77008AB9A1 /* 2.jpg */,
 			);
 			path = AnimationDemo;
 			sourceTree = "<group>";
@@ -186,10 +197,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD55D1F41FCECD78008AB9A1 /* 2.jpg in Resources */,
 				AD464E141FA1B92500A81714 /* LaunchScreen.storyboard in Resources */,
 				AD464E111FA1B92500A81714 /* Assets.xcassets in Resources */,
 				AD54E4171FC842D300EA2545 /* README.md in Resources */,
 				AD464E0F1FA1B92500A81714 /* Main.storyboard in Resources */,
+				AD55D1F31FCECD78008AB9A1 /* 1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +219,7 @@
 				AD27B80C1FCBA41B003270B4 /* DiagramView.m in Sources */,
 				AD1DB70A1FCD7E1000791801 /* GradientNExtViewController.m in Sources */,
 				AD464E091FA1B92500A81714 /* AppDelegate.m in Sources */,
+				AD55D1F71FCED27B008AB9A1 /* GradientLastViewController.m in Sources */,
 				AD27B80F1FCBA95B003270B4 /* ShaperViewController.m in Sources */,
 				AD464E1F1FA1B94D00A81714 /* MainTableViewController.m in Sources */,
 				AD464E231FA1BBCF00A81714 /* AnimationViewController.m in Sources */,
