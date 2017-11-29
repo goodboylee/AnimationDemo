@@ -19,6 +19,7 @@
 		AD464E1F1FA1B94D00A81714 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD464E1E1FA1B94D00A81714 /* MainTableViewController.m */; };
 		AD464E231FA1BBCF00A81714 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD464E221FA1BBCF00A81714 /* AnimationViewController.m */; };
 		AD54E4171FC842D300EA2545 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AD54E4161FC842D300EA2545 /* README.md */; };
+		AD55D1F01FCEAF15008AB9A1 /* GradientExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD55D1EF1FCEAF15008AB9A1 /* GradientExampleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		AD464E211FA1BBCF00A81714 /* AnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
 		AD464E221FA1BBCF00A81714 /* AnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
 		AD54E4161FC842D300EA2545 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AD55D1EE1FCEAF15008AB9A1 /* GradientExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientExampleViewController.h; sourceTree = "<group>"; };
+		AD55D1EF1FCEAF15008AB9A1 /* GradientExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientExampleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				AD1DB7061FCD5AFA00791801 /* GradientViewController.m */,
 				AD1DB7081FCD7E0F00791801 /* GradientNExtViewController.h */,
 				AD1DB7091FCD7E0F00791801 /* GradientNExtViewController.m */,
+				AD55D1EE1FCEAF15008AB9A1 /* GradientExampleViewController.h */,
+				AD55D1EF1FCEAF15008AB9A1 /* GradientExampleViewController.m */,
 			);
 			path = CAGradientLayer;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD55D1F01FCEAF15008AB9A1 /* GradientExampleViewController.m in Sources */,
 				AD1DB7071FCD5AFA00791801 /* GradientViewController.m in Sources */,
 				AD464E171FA1B92500A81714 /* main.m in Sources */,
 				AD27B80C1FCBA41B003270B4 /* DiagramView.m in Sources */,

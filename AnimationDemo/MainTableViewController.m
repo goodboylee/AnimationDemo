@@ -9,7 +9,7 @@
 #import "MainTableViewController.h"
 #import "AnimationViewController.h"
 #import "ShaperViewController.h"
-#import "GradientViewController.h"
+#import "GradientExampleViewController.h"
 
 
 static NSString *const cellIdentifier = @"cellIdentifier";
@@ -99,7 +99,7 @@ static NSString *const cellIdentifier = @"cellIdentifier";
 }
 
 - (void)pushToGradientVC{
-    GradientViewController *vc =[self.storyboard instantiateViewControllerWithIdentifier:@"GradientViewController"];
+    GradientExampleViewController *vc =[self.storyboard instantiateViewControllerWithIdentifier:@"GradientExampleViewController"];
     [self.navigationController pushViewController:vc animated:YES];
 }
 #pragma mark - Navigation
