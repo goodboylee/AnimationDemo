@@ -212,6 +212,52 @@
             </objects>
             <point key="canvasLocation" x="1173.5999999999999" y="649.92503748125944"/>
         </scene>
+        <!--Mask View Controller-->
+        <scene sceneID="08Z-cJ-KTm">
+            <objects>
+                <viewController storyboardIdentifier="MaskViewController" id="jw3-Jp-nuj" customClass="MaskViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y7k-dL-5WS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oCi-kq-61l">
+                                <rect key="frame" x="10" y="30" width="355" height="627"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="jou-bj-dya" userLabel="FirstImageview">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="151"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="njR-gd-yv8">
+                                        <rect key="frame" x="0.0" y="159" width="355" height="150.5"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="1T6-cc-cCU">
+                                        <rect key="frame" x="0.0" y="317.5" width="355" height="151"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="Dd2-zO-rO6">
+                                        <rect key="frame" x="0.0" y="476.5" width="355" height="150.5"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jcp-I0-2Dl" firstAttribute="bottom" secondItem="oCi-kq-61l" secondAttribute="bottom" constant="10" id="G7a-ah-laj"/>
+                            <constraint firstItem="oCi-kq-61l" firstAttribute="top" secondItem="Jcp-I0-2Dl" secondAttribute="top" constant="10" id="GEk-ZM-Wtf"/>
+                            <constraint firstItem="oCi-kq-61l" firstAttribute="leading" secondItem="Y7k-dL-5WS" secondAttribute="leading" constant="10" id="gIb-tx-PN5"/>
+                            <constraint firstAttribute="trailing" secondItem="oCi-kq-61l" secondAttribute="trailing" constant="10" id="mwC-Gt-lBC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jcp-I0-2Dl"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomImageview" destination="Dd2-zO-rO6" id="IN3-7c-Se0"/>
+                        <outlet property="firstImageview" destination="jou-bj-dya" id="bMM-TL-WLn"/>
+                        <outlet property="middleImageview" destination="1T6-cc-cCU" id="GK1-pz-pfI"/>
+                        <outlet property="topImageview" destination="njR-gd-yv8" id="gG0-ZT-h6V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j2u-WP-gob" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1176.8" y="1363.2683658170915"/>
+        </scene>
         <!--Animation View Controller-->
         <scene sceneID="gRx-Kt-9gc">
             <objects>
@@ -417,13 +463,13 @@
                                     <constraint firstAttribute="width" constant="100" id="SkK-sk-gFK"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="m5T-vp-xS1" userLabel="bgImageview">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="m5T-vp-xS1" userLabel="bgImageview">
                                 <rect key="frame" x="10" y="457" width="355" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="09t-Nd-UDW"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vLn-sC-vaJ" userLabel="frontImageview">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="vLn-sC-vaJ" userLabel="frontImageview">
                                 <rect key="frame" x="10" y="457" width="355" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="e0s-5h-98P"/>
@@ -461,13 +507,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wyx-0r-wud" userLabel="bgImageview">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="wyx-0r-wud" userLabel="bgImageview">
                                 <rect key="frame" x="10" y="457" width="355" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="0Ft-E9-00p"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mw7-fh-NNC" userLabel="frontImageview">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="mw7-fh-NNC" userLabel="frontImageview">
                                 <rect key="frame" x="10" y="457" width="355" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="0qN-zK-jFk"/>
@@ -512,8 +558,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1.jpg" width="500" height="333"/>
-        <image name="2.jpg" width="500" height="313"/>
+        <image name="1" width="500" height="333"/>
+        <image name="2" width="500" height="372"/>
         <image name="beauty" width="200" height="200"/>
         <image name="rocket" width="40" height="40"/>
     </resources>

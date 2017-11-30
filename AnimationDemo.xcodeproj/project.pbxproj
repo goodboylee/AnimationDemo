@@ -21,6 +21,11 @@
 		AD54E4171FC842D300EA2545 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AD54E4161FC842D300EA2545 /* README.md */; };
 		AD55D1F01FCEAF15008AB9A1 /* GradientExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD55D1EF1FCEAF15008AB9A1 /* GradientExampleViewController.m */; };
 		AD55D1F71FCED27B008AB9A1 /* GradientLastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD55D1F61FCED27B008AB9A1 /* GradientLastViewController.m */; };
+		AD5F6B731FCF9F5900FE586F /* MaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5F6B721FCF9F5900FE586F /* MaskViewController.m */; };
+		AD5F6B771FCFD70100FE586F /* robotMan.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5F6B761FCFD70000FE586F /* robotMan.png */; };
+		AD5F6B7D1FCFDF8300FE586F /* robot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD5F6B7C1FCFDF8300FE586F /* robot.jpg */; };
+		AD5F6B801FCFF6F000FE586F /* bgTransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5F6B7E1FCFF6EF00FE586F /* bgTransparent.png */; };
+		AD5F6B811FCFF6F000FE586F /* bgNonTransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5F6B7F1FCFF6F000FE586F /* bgNonTransparent.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +54,12 @@
 		AD55D1EF1FCEAF15008AB9A1 /* GradientExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientExampleViewController.m; sourceTree = "<group>"; };
 		AD55D1F51FCED27B008AB9A1 /* GradientLastViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientLastViewController.h; sourceTree = "<group>"; };
 		AD55D1F61FCED27B008AB9A1 /* GradientLastViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientLastViewController.m; sourceTree = "<group>"; };
+		AD5F6B711FCF9F5900FE586F /* MaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaskViewController.h; sourceTree = "<group>"; };
+		AD5F6B721FCF9F5900FE586F /* MaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaskViewController.m; sourceTree = "<group>"; };
+		AD5F6B761FCFD70000FE586F /* robotMan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = robotMan.png; path = ../../../../../../Downloads/robotMan.png; sourceTree = "<group>"; };
+		AD5F6B7C1FCFDF8300FE586F /* robot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = robot.jpg; sourceTree = "<group>"; };
+		AD5F6B7E1FCFF6EF00FE586F /* bgTransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgTransparent.png; sourceTree = "<group>"; };
+		AD5F6B7F1FCFF6F000FE586F /* bgNonTransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgNonTransparent.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +123,7 @@
 				AD464E081FA1B92500A81714 /* AppDelegate.m */,
 				AD464E1D1FA1B94D00A81714 /* MainTableViewController.h */,
 				AD464E1E1FA1B94D00A81714 /* MainTableViewController.m */,
+				AD5F6B701FCF953000FE586F /* Mask */,
 				AD1DB7031FCCE94200791801 /* CAGradientLayer */,
 				AD27B8091FCBA3D6003270B4 /* CAShapeLayer */,
 				AD464E201FA1BB2100A81714 /* basicAnimation */,
@@ -120,6 +132,10 @@
 				AD464E121FA1B92500A81714 /* LaunchScreen.storyboard */,
 				AD464E151FA1B92500A81714 /* Info.plist */,
 				AD464E161FA1B92500A81714 /* main.m */,
+				AD5F6B761FCFD70000FE586F /* robotMan.png */,
+				AD5F6B7C1FCFDF8300FE586F /* robot.jpg */,
+				AD5F6B7F1FCFF6F000FE586F /* bgNonTransparent.png */,
+				AD5F6B7E1FCFF6EF00FE586F /* bgTransparent.png */,
 			);
 			path = AnimationDemo;
 			sourceTree = "<group>";
@@ -131,6 +147,15 @@
 				AD464E221FA1BBCF00A81714 /* AnimationViewController.m */,
 			);
 			path = basicAnimation;
+			sourceTree = "<group>";
+		};
+		AD5F6B701FCF953000FE586F /* Mask */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F6B711FCF9F5900FE586F /* MaskViewController.h */,
+				AD5F6B721FCF9F5900FE586F /* MaskViewController.m */,
+			);
+			path = Mask;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,10 +216,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD5F6B7D1FCFDF8300FE586F /* robot.jpg in Resources */,
+				AD5F6B801FCFF6F000FE586F /* bgTransparent.png in Resources */,
 				AD464E141FA1B92500A81714 /* LaunchScreen.storyboard in Resources */,
 				AD464E111FA1B92500A81714 /* Assets.xcassets in Resources */,
 				AD54E4171FC842D300EA2545 /* README.md in Resources */,
+				AD5F6B811FCFF6F000FE586F /* bgNonTransparent.png in Resources */,
 				AD464E0F1FA1B92500A81714 /* Main.storyboard in Resources */,
+				AD5F6B771FCFD70100FE586F /* robotMan.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +240,7 @@
 				AD27B80C1FCBA41B003270B4 /* DiagramView.m in Sources */,
 				AD1DB70A1FCD7E1000791801 /* GradientNExtViewController.m in Sources */,
 				AD464E091FA1B92500A81714 /* AppDelegate.m in Sources */,
+				AD5F6B731FCF9F5900FE586F /* MaskViewController.m in Sources */,
 				AD55D1F71FCED27B008AB9A1 /* GradientLastViewController.m in Sources */,
 				AD27B80F1FCBA95B003270B4 /* ShaperViewController.m in Sources */,
 				AD464E1F1FA1B94D00A81714 /* MainTableViewController.m in Sources */,

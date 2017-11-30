@@ -10,6 +10,8 @@
 #import "AnimationViewController.h"
 #import "ShaperViewController.h"
 #import "GradientExampleViewController.h"
+#import "MaskViewController.h"
+#import "MaskViewController.h"
 
 
 static NSString *const cellIdentifier = @"cellIdentifier";
@@ -35,7 +37,7 @@ static NSString *const cellIdentifier = @"cellIdentifier";
 }
 
 - (void)initData{
-    self.dataSource = @[@"基础动画", @"CAShaperLayer USE", @"CAGradientLayer USE"];
+    self.dataSource = @[@"基础动画", @"CAShaperLayer USE", @"CAGradientLayer USE", @"Mask使用"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -71,6 +73,8 @@ static NSString *const cellIdentifier = @"cellIdentifier";
         [self pushToShaperVC];
     }else if (indexPath.row == 2){
         [self pushToGradientVC];
+    }else if (indexPath.row == 3){
+        [self pushToMaskVC];
     }
         
 }
@@ -101,6 +105,10 @@ static NSString *const cellIdentifier = @"cellIdentifier";
 - (void)pushToGradientVC{
     GradientExampleViewController *vc =[self.storyboard instantiateViewControllerWithIdentifier:@"GradientExampleViewController"];
     [self.navigationController pushViewController:vc animated:YES];
+}
+- (void)pushToMaskVC{
+    MaskViewController *maskVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MaskViewController"];
+    [self.navigationController pushViewController:maskVC animated:YES];
 }
 #pragma mark - Navigation
 
