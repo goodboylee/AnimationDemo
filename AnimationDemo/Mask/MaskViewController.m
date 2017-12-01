@@ -7,6 +7,7 @@
 //
 
 #import "MaskViewController.h"
+#import "MaskNextViewController.h"
 
 static NSInteger const space = 10;
 
@@ -33,6 +34,7 @@ static NSInteger const space = 10;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self initViews];
     [self configureTransparentLayer];
     [self configureNonTransparentLayer];
     [self configureCompositeMaskLayer];
@@ -57,6 +59,17 @@ static NSInteger const space = 10;
     
     [self resizeFrame];
     
+}
+
+- (void)initViews{
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(nextVC)];
+    self.navigationItem.rightBarButtonItem = item;
+}
+
+#pragma mark - event methods
+- (void)nextVC{
+    MaskNextViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MaskNextViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)configureTransparentLayer{

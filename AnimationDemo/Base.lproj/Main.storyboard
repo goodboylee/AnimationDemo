@@ -258,6 +258,59 @@
             </objects>
             <point key="canvasLocation" x="1176.8" y="1363.2683658170915"/>
         </scene>
+        <!--Mask Next View Controller-->
+        <scene sceneID="emH-F1-bPX">
+            <objects>
+                <viewController storyboardIdentifier="MaskNextViewController" id="4TB-HN-a59" customClass="MaskNextViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gbe-6e-dc6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3he-K5-g0f">
+                                <rect key="frame" x="62" y="164" width="250" height="30"/>
+                                <color key="backgroundColor" red="0.63917887520000005" green="0.89143577900000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="ZXQ-Lk-aoU"/>
+                                    <constraint firstAttribute="height" constant="30" id="ci6-4K-iAZ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6uR-3a-HKK">
+                                <rect key="frame" x="152" y="298.5" width="70" height="70"/>
+                                <color key="backgroundColor" red="0.63917887520000005" green="0.89143577900000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="6z6-9a-L3J"/>
+                                    <constraint firstAttribute="height" constant="70" id="STy-kw-MJC"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHG-Rd-WEi">
+                                <rect key="frame" x="152" y="398.5" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="KGO-vk-8JW"/>
+                                    <constraint firstAttribute="width" constant="70" id="rfJ-iX-bwl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6uR-3a-HKK" firstAttribute="top" secondItem="3he-K5-g0f" secondAttribute="bottom" constant="104.5" id="62h-UL-TEI"/>
+                            <constraint firstItem="6uR-3a-HKK" firstAttribute="centerX" secondItem="gbe-6e-dc6" secondAttribute="centerX" id="FZf-Cm-rRU"/>
+                            <constraint firstItem="6uR-3a-HKK" firstAttribute="centerY" secondItem="gbe-6e-dc6" secondAttribute="centerY" id="Id9-8H-0wQ"/>
+                            <constraint firstItem="3he-K5-g0f" firstAttribute="centerX" secondItem="gbe-6e-dc6" secondAttribute="centerX" id="Idq-yL-xTS"/>
+                            <constraint firstItem="tHG-Rd-WEi" firstAttribute="centerX" secondItem="gbe-6e-dc6" secondAttribute="centerX" id="VY7-y2-Wzl"/>
+                            <constraint firstItem="tHG-Rd-WEi" firstAttribute="top" secondItem="6uR-3a-HKK" secondAttribute="bottom" constant="30" id="biW-ZH-YCY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BhE-k6-Dcv"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageBgView_1" destination="6uR-3a-HKK" id="ahF-Z5-jQk"/>
+                        <outlet property="imageBgView_2" destination="tHG-Rd-WEi" id="Vcm-2a-y96"/>
+                        <outlet property="labelBgView" destination="3he-K5-g0f" id="p7e-MX-PzR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iG3-je-tY9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2026" y="1363"/>
+        </scene>
         <!--Animation View Controller-->
         <scene sceneID="gRx-Kt-9gc">
             <objects>

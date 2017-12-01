@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD02A2AA1FD13FCB009910C8 /* MaskNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD02A2A91FD13FCB009910C8 /* MaskNextViewController.m */; };
 		AD1DB7071FCD5AFA00791801 /* GradientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1DB7061FCD5AFA00791801 /* GradientViewController.m */; };
 		AD1DB70A1FCD7E1000791801 /* GradientNExtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1DB7091FCD7E0F00791801 /* GradientNExtViewController.m */; };
 		AD27B80C1FCBA41B003270B4 /* DiagramView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD27B80B1FCBA41B003270B4 /* DiagramView.m */; };
@@ -22,13 +23,15 @@
 		AD55D1F01FCEAF15008AB9A1 /* GradientExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD55D1EF1FCEAF15008AB9A1 /* GradientExampleViewController.m */; };
 		AD55D1F71FCED27B008AB9A1 /* GradientLastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD55D1F61FCED27B008AB9A1 /* GradientLastViewController.m */; };
 		AD5F6B731FCF9F5900FE586F /* MaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5F6B721FCF9F5900FE586F /* MaskViewController.m */; };
-		AD5F6B771FCFD70100FE586F /* robotMan.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5F6B761FCFD70000FE586F /* robotMan.png */; };
 		AD5F6B7D1FCFDF8300FE586F /* robot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD5F6B7C1FCFDF8300FE586F /* robot.jpg */; };
 		AD5F6B801FCFF6F000FE586F /* bgTransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5F6B7E1FCFF6EF00FE586F /* bgTransparent.png */; };
 		AD5F6B811FCFF6F000FE586F /* bgNonTransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5F6B7F1FCFF6F000FE586F /* bgNonTransparent.png */; };
+		ADB472951FD0E09F00E1FC21 /* robotMan.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB472941FD0E09E00E1FC21 /* robotMan.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD02A2A81FD13FCB009910C8 /* MaskNextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaskNextViewController.h; sourceTree = "<group>"; };
+		AD02A2A91FD13FCB009910C8 /* MaskNextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaskNextViewController.m; sourceTree = "<group>"; };
 		AD1DB7051FCD5AFA00791801 /* GradientViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientViewController.h; sourceTree = "<group>"; };
 		AD1DB7061FCD5AFA00791801 /* GradientViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientViewController.m; sourceTree = "<group>"; };
 		AD1DB7081FCD7E0F00791801 /* GradientNExtViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientNExtViewController.h; sourceTree = "<group>"; };
@@ -56,10 +59,10 @@
 		AD55D1F61FCED27B008AB9A1 /* GradientLastViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientLastViewController.m; sourceTree = "<group>"; };
 		AD5F6B711FCF9F5900FE586F /* MaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaskViewController.h; sourceTree = "<group>"; };
 		AD5F6B721FCF9F5900FE586F /* MaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaskViewController.m; sourceTree = "<group>"; };
-		AD5F6B761FCFD70000FE586F /* robotMan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = robotMan.png; path = ../../../../../../Downloads/robotMan.png; sourceTree = "<group>"; };
 		AD5F6B7C1FCFDF8300FE586F /* robot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = robot.jpg; sourceTree = "<group>"; };
 		AD5F6B7E1FCFF6EF00FE586F /* bgTransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgTransparent.png; sourceTree = "<group>"; };
 		AD5F6B7F1FCFF6F000FE586F /* bgNonTransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgNonTransparent.png; sourceTree = "<group>"; };
+		ADB472941FD0E09E00E1FC21 /* robotMan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotMan.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +135,7 @@
 				AD464E121FA1B92500A81714 /* LaunchScreen.storyboard */,
 				AD464E151FA1B92500A81714 /* Info.plist */,
 				AD464E161FA1B92500A81714 /* main.m */,
-				AD5F6B761FCFD70000FE586F /* robotMan.png */,
+				ADB472941FD0E09E00E1FC21 /* robotMan.png */,
 				AD5F6B7C1FCFDF8300FE586F /* robot.jpg */,
 				AD5F6B7F1FCFF6F000FE586F /* bgNonTransparent.png */,
 				AD5F6B7E1FCFF6EF00FE586F /* bgTransparent.png */,
@@ -154,6 +157,8 @@
 			children = (
 				AD5F6B711FCF9F5900FE586F /* MaskViewController.h */,
 				AD5F6B721FCF9F5900FE586F /* MaskViewController.m */,
+				AD02A2A81FD13FCB009910C8 /* MaskNextViewController.h */,
+				AD02A2A91FD13FCB009910C8 /* MaskNextViewController.m */,
 			);
 			path = Mask;
 			sourceTree = "<group>";
@@ -217,13 +222,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD5F6B7D1FCFDF8300FE586F /* robot.jpg in Resources */,
+				ADB472951FD0E09F00E1FC21 /* robotMan.png in Resources */,
 				AD5F6B801FCFF6F000FE586F /* bgTransparent.png in Resources */,
 				AD464E141FA1B92500A81714 /* LaunchScreen.storyboard in Resources */,
 				AD464E111FA1B92500A81714 /* Assets.xcassets in Resources */,
 				AD54E4171FC842D300EA2545 /* README.md in Resources */,
 				AD5F6B811FCFF6F000FE586F /* bgNonTransparent.png in Resources */,
 				AD464E0F1FA1B92500A81714 /* Main.storyboard in Resources */,
-				AD5F6B771FCFD70100FE586F /* robotMan.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +248,7 @@
 				AD5F6B731FCF9F5900FE586F /* MaskViewController.m in Sources */,
 				AD55D1F71FCED27B008AB9A1 /* GradientLastViewController.m in Sources */,
 				AD27B80F1FCBA95B003270B4 /* ShaperViewController.m in Sources */,
+				AD02A2AA1FD13FCB009910C8 /* MaskNextViewController.m in Sources */,
 				AD464E1F1FA1B94D00A81714 /* MainTableViewController.m in Sources */,
 				AD464E231FA1BBCF00A81714 /* AnimationViewController.m in Sources */,
 			);
