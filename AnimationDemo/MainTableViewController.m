@@ -12,6 +12,7 @@
 #import "GradientExampleViewController.h"
 #import "MaskViewController.h"
 #import "MaskViewController.h"
+#import "EmitterListTableViewController.h"
 
 
 static NSString *const cellIdentifier = @"cellIdentifier";
@@ -37,7 +38,7 @@ static NSString *const cellIdentifier = @"cellIdentifier";
 }
 
 - (void)initData{
-    self.dataSource = @[@"基础动画", @"CAShaperLayer USE", @"CAGradientLayer USE", @"Mask使用"];
+    self.dataSource = @[@"基础动画", @"CAShaperLayer USE", @"CAGradientLayer USE", @"Mask使用", @"Emitter List"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -75,6 +76,8 @@ static NSString *const cellIdentifier = @"cellIdentifier";
         [self pushToGradientVC];
     }else if (indexPath.row == 3){
         [self pushToMaskVC];
+    }else if (indexPath.row == 4){
+        [self pushToEmitterList];
     }
         
 }
@@ -110,6 +113,11 @@ static NSString *const cellIdentifier = @"cellIdentifier";
     MaskViewController *maskVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MaskViewController"];
     [self.navigationController pushViewController:maskVC animated:YES];
 }
+- (void)pushToEmitterList{
+    EmitterListTableViewController *vc  =[self.storyboard instantiateViewControllerWithIdentifier:@"EmitterListTableViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation

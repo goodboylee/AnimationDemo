@@ -258,6 +258,78 @@
             </objects>
             <point key="canvasLocation" x="1176.8" y="1363.2683658170915"/>
         </scene>
+        <!--Emitter List Table View Controller-->
+        <scene sceneID="1li-HY-On8">
+            <objects>
+                <tableViewController storyboardIdentifier="EmitterListTableViewController" id="jYd-HU-l50" customClass="EmitterListTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZVN-o8-AYO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" id="eDP-bq-GpQ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eDP-bq-GpQ" id="4w8-9A-6om">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jYd-HU-l50" id="M1S-B6-J1o"/>
+                            <outlet property="delegate" destination="jYd-HU-l50" id="RPC-O1-R4Q"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tCy-v0-Zzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1212" y="2100"/>
+        </scene>
+        <!--Emitter Fire View Controller-->
+        <scene sceneID="Zz6-BQ-AEg">
+            <objects>
+                <viewController storyboardIdentifier="EmitterFireViewController" id="2VX-N8-tWF" customClass="EmitterFireViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BqA-XV-5Dc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="100" maxValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="cPp-Pr-EAC">
+                                <rect key="frame" x="203" y="318.5" width="304" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="2mA-ja-gKL"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderAction:" destination="2VX-N8-tWF" eventType="valueChanged" id="VM0-aF-W92"/>
+                                </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDc-qL-AG0">
+                                <rect key="frame" x="0.0" y="332.5" width="375" height="1"/>
+                                <color key="backgroundColor" red="1" green="0.17436239170000001" blue="0.15703119330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Xz9-I0-ILw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cPp-Pr-EAC" firstAttribute="centerY" secondItem="BqA-XV-5Dc" secondAttribute="centerY" id="9BH-E7-PPp"/>
+                            <constraint firstItem="GDc-qL-AG0" firstAttribute="centerX" secondItem="BqA-XV-5Dc" secondAttribute="centerX" id="PC9-4t-jTH"/>
+                            <constraint firstItem="GDc-qL-AG0" firstAttribute="leading" secondItem="BHA-ir-ZIE" secondAttribute="leading" id="Yjl-CO-S47"/>
+                            <constraint firstItem="BHA-ir-ZIE" firstAttribute="trailing" secondItem="cPp-Pr-EAC" secondAttribute="trailing" constant="-130" id="foY-QV-9Ag"/>
+                            <constraint firstItem="GDc-qL-AG0" firstAttribute="centerY" secondItem="BqA-XV-5Dc" secondAttribute="centerY" id="hhN-Bl-XL7"/>
+                            <constraint firstItem="BHA-ir-ZIE" firstAttribute="trailing" secondItem="GDc-qL-AG0" secondAttribute="trailing" id="n3O-ef-FOZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BHA-ir-ZIE"/>
+                    </view>
+                    <connections>
+                        <outlet property="slider" destination="cPp-Pr-EAC" id="seP-fN-Kdy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o9p-a8-yhz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1992.8" y="2095.5022488755626"/>
+        </scene>
         <!--Mask Next View Controller-->
         <scene sceneID="emH-F1-bPX">
             <objects>
