@@ -11,9 +11,10 @@
 		AD1DB7071FCD5AFA00791801 /* GradientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1DB7061FCD5AFA00791801 /* GradientViewController.m */; };
 		AD1DB70A1FCD7E1000791801 /* GradientNExtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1DB7091FCD7E0F00791801 /* GradientNExtViewController.m */; };
 		AD211F911FD4D0D60064F39B /* EmitterListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD211F901FD4D0D60064F39B /* EmitterListTableViewController.m */; };
-		AD211FB61FD4F3D80064F39B /* EmitterFireViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD211FB51FD4F3D80064F39B /* EmitterFireViewController.m */; };
 		AD27B80C1FCBA41B003270B4 /* DiagramView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD27B80B1FCBA41B003270B4 /* DiagramView.m */; };
 		AD27B80F1FCBA95B003270B4 /* ShaperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD27B80E1FCBA95B003270B4 /* ShaperViewController.m */; };
+		AD415B501FD62D3F00F837B3 /* EmitterDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD415B4F1FD62D3F00F837B3 /* EmitterDetailViewController.m */; };
+		AD415B531FD69B2600F837B3 /* EmitterTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD415B521FD69B2600F837B3 /* EmitterTestViewController.m */; };
 		AD464E091FA1B92500A81714 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD464E081FA1B92500A81714 /* AppDelegate.m */; };
 		AD464E0F1FA1B92500A81714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD464E0D1FA1B92500A81714 /* Main.storyboard */; };
 		AD464E111FA1B92500A81714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD464E101FA1B92500A81714 /* Assets.xcassets */; };
@@ -40,12 +41,14 @@
 		AD1DB7091FCD7E0F00791801 /* GradientNExtViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientNExtViewController.m; sourceTree = "<group>"; };
 		AD211F8F1FD4D0D60064F39B /* EmitterListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmitterListTableViewController.h; sourceTree = "<group>"; };
 		AD211F901FD4D0D60064F39B /* EmitterListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmitterListTableViewController.m; sourceTree = "<group>"; };
-		AD211FB41FD4F3D80064F39B /* EmitterFireViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmitterFireViewController.h; sourceTree = "<group>"; };
-		AD211FB51FD4F3D80064F39B /* EmitterFireViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmitterFireViewController.m; sourceTree = "<group>"; };
 		AD27B80A1FCBA41B003270B4 /* DiagramView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiagramView.h; sourceTree = "<group>"; };
 		AD27B80B1FCBA41B003270B4 /* DiagramView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiagramView.m; sourceTree = "<group>"; };
 		AD27B80D1FCBA95B003270B4 /* ShaperViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaperViewController.h; sourceTree = "<group>"; };
 		AD27B80E1FCBA95B003270B4 /* ShaperViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShaperViewController.m; sourceTree = "<group>"; };
+		AD415B4E1FD62D3F00F837B3 /* EmitterDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmitterDetailViewController.h; sourceTree = "<group>"; };
+		AD415B4F1FD62D3F00F837B3 /* EmitterDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmitterDetailViewController.m; sourceTree = "<group>"; };
+		AD415B511FD69B2600F837B3 /* EmitterTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmitterTestViewController.h; sourceTree = "<group>"; };
+		AD415B521FD69B2600F837B3 /* EmitterTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmitterTestViewController.m; sourceTree = "<group>"; };
 		AD464E041FA1B92500A81714 /* AnimationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD464E071FA1B92500A81714 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AD464E081FA1B92500A81714 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -102,8 +105,10 @@
 			children = (
 				AD211F8F1FD4D0D60064F39B /* EmitterListTableViewController.h */,
 				AD211F901FD4D0D60064F39B /* EmitterListTableViewController.m */,
-				AD211FB41FD4F3D80064F39B /* EmitterFireViewController.h */,
-				AD211FB51FD4F3D80064F39B /* EmitterFireViewController.m */,
+				AD415B4E1FD62D3F00F837B3 /* EmitterDetailViewController.h */,
+				AD415B4F1FD62D3F00F837B3 /* EmitterDetailViewController.m */,
+				AD415B511FD69B2600F837B3 /* EmitterTestViewController.h */,
+				AD415B521FD69B2600F837B3 /* EmitterTestViewController.m */,
 			);
 			path = CAEmitterLayer;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 			files = (
 				AD211F911FD4D0D60064F39B /* EmitterListTableViewController.m in Sources */,
 				AD55D1F01FCEAF15008AB9A1 /* GradientExampleViewController.m in Sources */,
+				AD415B501FD62D3F00F837B3 /* EmitterDetailViewController.m in Sources */,
 				AD1DB7071FCD5AFA00791801 /* GradientViewController.m in Sources */,
 				AD464E171FA1B92500A81714 /* main.m in Sources */,
 				AD27B80C1FCBA41B003270B4 /* DiagramView.m in Sources */,
@@ -266,11 +272,11 @@
 				AD464E091FA1B92500A81714 /* AppDelegate.m in Sources */,
 				AD5F6B731FCF9F5900FE586F /* MaskViewController.m in Sources */,
 				AD55D1F71FCED27B008AB9A1 /* GradientLastViewController.m in Sources */,
-				AD211FB61FD4F3D80064F39B /* EmitterFireViewController.m in Sources */,
 				AD27B80F1FCBA95B003270B4 /* ShaperViewController.m in Sources */,
 				AD02A2AA1FD13FCB009910C8 /* MaskNextViewController.m in Sources */,
 				AD464E1F1FA1B94D00A81714 /* MainTableViewController.m in Sources */,
 				AD464E231FA1BBCF00A81714 /* AnimationViewController.m in Sources */,
+				AD415B531FD69B2600F837B3 /* EmitterTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

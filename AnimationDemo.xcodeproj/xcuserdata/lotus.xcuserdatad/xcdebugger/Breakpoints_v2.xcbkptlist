@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "AnimationDemo/CAEmitterLayer/EmitterFireViewController.m"
-            timestampString = "534074175.374391"
+            timestampString = "534158096.008665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "-sliderAction:"
             landmarkType = "7">
             <Actions>

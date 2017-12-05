@@ -7,7 +7,8 @@
 //
 
 #import "EmitterListTableViewController.h"
-#import "EmitterFireViewController.h"
+#import "EmitterDetailViewController.h"
+#import "EmitterTestViewController.h"
 
 static NSString *const cellID = @"cellID";
 
@@ -27,7 +28,7 @@ static NSString *const cellID = @"cellID";
 }
 
 - (void)initData{
-    _datas = @[@"火焰效果"];
+    _datas = @[@"火焰效果", @"雪花效果", @"烟花效果", @"test"];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -38,12 +39,12 @@ static NSString *const cellID = @"cellID";
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return _datas.count;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 1;
+    return _datas.count;
 }
 
 
@@ -57,13 +58,27 @@ static NSString *const cellID = @"cellID";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSInteger row = indexPath.row;
+    
     if (row == 0) {
-        [self pushToFireVC];
+        [self pushToDetailVCWithType:EmitterTypeFire];
+    }else if (row == 1){
+        [self pushToDetailVCWithType:EmitterTypeSnow];
+    }else if (row == 2){
+        [self pushToDetailVCWithType:EmitterTypeSparkle];
+    }
+    
+    else{
+        [self pushToTestVC];
     }
 }
 
-- (void)pushToFireVC{
-    EmitterFireViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"EmitterFireViewController"];
+- (void)pushToDetailVCWithType:(EmitterType)type{
+    EmitterDetailViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"EmitterDetailViewController"];
+    vc.emitterType = type;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+- (void)pushToTestVC{
+    EmitterTestViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"EmitterTestViewController"];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
