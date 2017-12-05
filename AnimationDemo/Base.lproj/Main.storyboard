@@ -286,6 +286,47 @@
             </objects>
             <point key="canvasLocation" x="1212" y="2100"/>
         </scene>
+        <!--Replicator View Controller-->
+        <scene sceneID="4w8-hQ-4Kj">
+            <objects>
+                <viewController storyboardIdentifier="ReplicatorViewController" id="8XI-No-qlh" customClass="ReplicatorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U1L-9P-L5q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="rkB-bo-fyd">
+                                <rect key="frame" x="162.5" y="308.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rkB-bo-fyd" secondAttribute="height" multiplier="1:1" id="4Ec-ic-W8I"/>
+                                    <constraint firstAttribute="width" constant="50" id="z1i-GH-SXk"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="earth" translatesAutoresizingMaskIntoConstraints="NO" id="iQp-Ue-QOx">
+                                <rect key="frame" x="320" y="321" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="iQp-Ue-QOx" secondAttribute="height" multiplier="1:1" id="9iJ-Z9-jxI"/>
+                                    <constraint firstAttribute="width" constant="25" id="9tV-7Q-tjl"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="O3I-eB-gK7" firstAttribute="trailing" secondItem="iQp-Ue-QOx" secondAttribute="trailing" constant="30" id="1rJ-WY-qVY"/>
+                            <constraint firstItem="iQp-Ue-QOx" firstAttribute="centerY" secondItem="U1L-9P-L5q" secondAttribute="centerY" id="9Ml-rP-ibR"/>
+                            <constraint firstItem="rkB-bo-fyd" firstAttribute="centerY" secondItem="U1L-9P-L5q" secondAttribute="centerY" id="GQq-qD-zgF"/>
+                            <constraint firstItem="rkB-bo-fyd" firstAttribute="centerX" secondItem="U1L-9P-L5q" secondAttribute="centerX" id="fDG-GM-62L"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O3I-eB-gK7"/>
+                    </view>
+                    <connections>
+                        <outlet property="earthImageview" destination="iQp-Ue-QOx" id="VUn-zT-Jjc"/>
+                        <outlet property="sunImageview" destination="rkB-bo-fyd" id="Pmi-EF-hdF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GwQ-dt-f1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1197.5999999999999" y="2910.4947526236883"/>
+        </scene>
         <!--Emitter Test View Controller-->
         <scene sceneID="Zz6-BQ-AEg">
             <objects>
@@ -781,6 +822,8 @@
         <image name="1" width="500" height="333"/>
         <image name="2" width="500" height="372"/>
         <image name="beauty" width="200" height="200"/>
+        <image name="earth" width="25" height="25"/>
         <image name="rocket" width="40" height="40"/>
+        <image name="sun" width="50" height="50"/>
     </resources>
 </document>

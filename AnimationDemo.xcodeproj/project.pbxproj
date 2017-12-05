@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99E36ECE1FD70DD800635BEA /* ReplicatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E36ECD1FD70DD800635BEA /* ReplicatorViewController.m */; };
 		AD02A2AA1FD13FCB009910C8 /* MaskNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD02A2A91FD13FCB009910C8 /* MaskNextViewController.m */; };
 		AD1DB7071FCD5AFA00791801 /* GradientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1DB7061FCD5AFA00791801 /* GradientViewController.m */; };
 		AD1DB70A1FCD7E1000791801 /* GradientNExtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1DB7091FCD7E0F00791801 /* GradientNExtViewController.m */; };
@@ -33,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		99E36ECC1FD70DD800635BEA /* ReplicatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReplicatorViewController.h; sourceTree = "<group>"; };
+		99E36ECD1FD70DD800635BEA /* ReplicatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReplicatorViewController.m; sourceTree = "<group>"; };
 		AD02A2A81FD13FCB009910C8 /* MaskNextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaskNextViewController.h; sourceTree = "<group>"; };
 		AD02A2A91FD13FCB009910C8 /* MaskNextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaskNextViewController.m; sourceTree = "<group>"; };
 		AD1DB7051FCD5AFA00791801 /* GradientViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientViewController.h; sourceTree = "<group>"; };
@@ -85,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99E36ECB1FD70D8C00635BEA /* CAReplicatorLayer */ = {
+			isa = PBXGroup;
+			children = (
+				99E36ECC1FD70DD800635BEA /* ReplicatorViewController.h */,
+				99E36ECD1FD70DD800635BEA /* ReplicatorViewController.m */,
+			);
+			path = CAReplicatorLayer;
+			sourceTree = "<group>";
+		};
 		AD1DB7031FCCE94200791801 /* CAGradientLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +165,7 @@
 				AD27B8091FCBA3D6003270B4 /* CAShapeLayer */,
 				AD464E201FA1BB2100A81714 /* basicAnimation */,
 				AD211F8E1FD4CEF30064F39B /* CAEmitterLayer */,
+				99E36ECB1FD70D8C00635BEA /* CAReplicatorLayer */,
 				AD464E0D1FA1B92500A81714 /* Main.storyboard */,
 				AD464E101FA1B92500A81714 /* Assets.xcassets */,
 				AD464E121FA1B92500A81714 /* LaunchScreen.storyboard */,
@@ -271,6 +284,7 @@
 				AD1DB70A1FCD7E1000791801 /* GradientNExtViewController.m in Sources */,
 				AD464E091FA1B92500A81714 /* AppDelegate.m in Sources */,
 				AD5F6B731FCF9F5900FE586F /* MaskViewController.m in Sources */,
+				99E36ECE1FD70DD800635BEA /* ReplicatorViewController.m in Sources */,
 				AD55D1F71FCED27B008AB9A1 /* GradientLastViewController.m in Sources */,
 				AD27B80F1FCBA95B003270B4 /* ShaperViewController.m in Sources */,
 				AD02A2AA1FD13FCB009910C8 /* MaskNextViewController.m in Sources */,

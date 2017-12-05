@@ -13,6 +13,7 @@
 #import "MaskViewController.h"
 #import "MaskViewController.h"
 #import "EmitterListTableViewController.h"
+#import "ReplicatorViewController.h"
 
 
 static NSString *const cellIdentifier = @"cellIdentifier";
@@ -38,7 +39,7 @@ static NSString *const cellIdentifier = @"cellIdentifier";
 }
 
 - (void)initData{
-    self.dataSource = @[@"基础动画", @"CAShaperLayer USE", @"CAGradientLayer USE", @"Mask使用", @"Emitter List"];
+    self.dataSource = @[@"基础动画", @"CAShaperLayer USE", @"CAGradientLayer USE", @"Mask使用", @"Emitter List", @"CAReplicatorLayer USE"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -78,6 +79,8 @@ static NSString *const cellIdentifier = @"cellIdentifier";
         [self pushToMaskVC];
     }else if (indexPath.row == 4){
         [self pushToEmitterList];
+    }else if (indexPath.row == 5){
+        [self pushToReplicatorVC];
     }
         
 }
@@ -115,6 +118,10 @@ static NSString *const cellIdentifier = @"cellIdentifier";
 }
 - (void)pushToEmitterList{
     EmitterListTableViewController *vc  =[self.storyboard instantiateViewControllerWithIdentifier:@"EmitterListTableViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+- (void)pushToReplicatorVC{
+    ReplicatorViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ReplicatorViewController"];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

@@ -40,6 +40,8 @@
     if (_emitterType == EmitterTypeSparkle) {
         [self setupTimer];
     }
+    
+    
 }
 
 - (void)setupTimer{
