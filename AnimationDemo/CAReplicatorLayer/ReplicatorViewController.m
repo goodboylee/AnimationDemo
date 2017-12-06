@@ -8,10 +8,18 @@
 
 #import "ReplicatorViewController.h"
 
-@interface ReplicatorViewController ()
+static NSInteger const space = 30;
+static NSInteger const earthDiameter = 25;
+#define SCREEN_WIDTH    [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT   [UIScreen mainScreen].bounds.size.height
 
-@property (weak, nonatomic) IBOutlet UIImageView *sunImageview;
-@property (weak, nonatomic) IBOutlet UIImageView *earthImageview;
+
+@interface ReplicatorViewController ()
+{
+    CAReplicatorLayer *_rpLayer;
+}
+@property (strong, nonatomic) IBOutlet UIImageView *sunImageview;
+@property (strong, nonatomic) UIImageView *earthImageview;
 
 @end
 
@@ -20,26 +28,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self configureReplicatorLayer];
+    [self initViews];
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self  configureReplicatorLayer];
+}
+
+- (void)initViews{
+    
+    UIImageView *imgview_1 = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH- space- earthDiameter, self.view.center.y - earthDiameter / 2, earthDiameter, earthDiameter)];
+    imgview_1.image = [UIImage imageNamed:@"earth"];
+    _earthImageview = imgview_1;
+}
 - (void)configureReplicatorLayer{
     
     CAReplicatorLayer *replicatorLayer = [CAReplicatorLayer layer];
     replicatorLayer.frame = self.view.bounds;
-    replicatorLayer.instanceCount = 100;
+    replicatorLayer.instanceCount = 20;
     replicatorLayer.instanceDelay = 0.5;
-    [self.view.layer addSublayer:replicatorLayer];
-    [replicatorLayer addSublayer:_sunImageview.layer];
+    _rpLayer = replicatorLayer;
+    [self.view.layer addSublayer:_rpLayer];
     [replicatorLayer addSublayer:_earthImageview.layer];
     
-    CGSize size = [UIScreen mainScreen].bounds.size;
-    NSInteger radius = (size.width - _earthImageview.bounds.size.width - 30) / 2;
-    UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:_sunImageview.center radius:radius startAngle:0 endAngle:M_PI * 2 clockwise:YES];
+    NSInteger radius = (SCREEN_WIDTH - earthDiameter - space * 2) / 2;
+    UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:self.view.center radius:radius startAngle:0 endAngle:M_PI * 2 clockwise:YES];
     
     CAKeyframeAnimation *keyAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     keyAnimation.path = path.CGPath;
     keyAnimation.duration = 10.0;
+    keyAnimation.repeatCount = MAXFLOAT;
     
     [_earthImageview.layer addAnimation:keyAnimation forKey:nil];
     

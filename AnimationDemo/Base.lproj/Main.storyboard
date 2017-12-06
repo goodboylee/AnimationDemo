@@ -294,33 +294,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="rkB-bo-fyd">
-                                <rect key="frame" x="162.5" y="308.5" width="50" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dty-mz-1MI">
+                                <rect key="frame" x="0.0" y="333" width="375" height="1"/>
+                                <color key="backgroundColor" red="1" green="0.17436239170000001" blue="0.15703119330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="rkB-bo-fyd" secondAttribute="height" multiplier="1:1" id="4Ec-ic-W8I"/>
-                                    <constraint firstAttribute="width" constant="50" id="z1i-GH-SXk"/>
+                                    <constraint firstAttribute="height" constant="1" id="EQa-rf-p8c"/>
                                 </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sky" translatesAutoresizingMaskIntoConstraints="NO" id="FMI-od-sUd">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="earth" translatesAutoresizingMaskIntoConstraints="NO" id="iQp-Ue-QOx">
-                                <rect key="frame" x="320" y="321" width="25" height="25"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="vW5-gc-vDT">
+                                <rect key="frame" x="162" y="308.5" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="iQp-Ue-QOx" secondAttribute="height" multiplier="1:1" id="9iJ-Z9-jxI"/>
-                                    <constraint firstAttribute="width" constant="25" id="9tV-7Q-tjl"/>
+                                    <constraint firstAttribute="width" secondItem="vW5-gc-vDT" secondAttribute="height" multiplier="1:1" id="HiZ-2T-pIF"/>
+                                    <constraint firstAttribute="width" constant="50" id="kBZ-aY-gIa"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="O3I-eB-gK7" firstAttribute="trailing" secondItem="iQp-Ue-QOx" secondAttribute="trailing" constant="30" id="1rJ-WY-qVY"/>
-                            <constraint firstItem="iQp-Ue-QOx" firstAttribute="centerY" secondItem="U1L-9P-L5q" secondAttribute="centerY" id="9Ml-rP-ibR"/>
-                            <constraint firstItem="rkB-bo-fyd" firstAttribute="centerY" secondItem="U1L-9P-L5q" secondAttribute="centerY" id="GQq-qD-zgF"/>
-                            <constraint firstItem="rkB-bo-fyd" firstAttribute="centerX" secondItem="U1L-9P-L5q" secondAttribute="centerX" id="fDG-GM-62L"/>
+                            <constraint firstItem="FMI-od-sUd" firstAttribute="leading" secondItem="O3I-eB-gK7" secondAttribute="leading" id="2no-2B-TkM"/>
+                            <constraint firstItem="dty-mz-1MI" firstAttribute="centerX" secondItem="U1L-9P-L5q" secondAttribute="centerX" id="Gez-0L-RcX"/>
+                            <constraint firstItem="FMI-od-sUd" firstAttribute="top" secondItem="O3I-eB-gK7" secondAttribute="top" id="RJC-cH-HKl"/>
+                            <constraint firstItem="dty-mz-1MI" firstAttribute="centerY" secondItem="U1L-9P-L5q" secondAttribute="centerY" id="RWt-VZ-zQ4"/>
+                            <constraint firstItem="O3I-eB-gK7" firstAttribute="trailing" secondItem="FMI-od-sUd" secondAttribute="trailing" id="SFT-cy-QVh"/>
+                            <constraint firstItem="O3I-eB-gK7" firstAttribute="bottom" secondItem="FMI-od-sUd" secondAttribute="bottom" id="gyV-Tb-60m"/>
+                            <constraint firstItem="dty-mz-1MI" firstAttribute="leading" secondItem="U1L-9P-L5q" secondAttribute="leading" id="jbb-b7-kNX"/>
+                            <constraint firstItem="vW5-gc-vDT" firstAttribute="centerY" secondItem="U1L-9P-L5q" secondAttribute="centerY" id="kS9-uD-mR4"/>
+                            <constraint firstItem="vW5-gc-vDT" firstAttribute="centerX" secondItem="U1L-9P-L5q" secondAttribute="centerX" id="oWO-Fn-1rY"/>
+                            <constraint firstAttribute="trailing" secondItem="dty-mz-1MI" secondAttribute="trailing" id="x3m-E0-825"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O3I-eB-gK7"/>
                     </view>
                     <connections>
-                        <outlet property="earthImageview" destination="iQp-Ue-QOx" id="VUn-zT-Jjc"/>
-                        <outlet property="sunImageview" destination="rkB-bo-fyd" id="Pmi-EF-hdF"/>
+                        <outlet property="sunImageview" destination="vW5-gc-vDT" id="JiH-E1-Laq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GwQ-dt-f1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -822,8 +830,8 @@
         <image name="1" width="500" height="333"/>
         <image name="2" width="500" height="372"/>
         <image name="beauty" width="200" height="200"/>
-        <image name="earth" width="25" height="25"/>
         <image name="rocket" width="40" height="40"/>
+        <image name="sky" width="325" height="500"/>
         <image name="sun" width="50" height="50"/>
     </resources>
 </document>
