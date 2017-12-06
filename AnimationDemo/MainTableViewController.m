@@ -13,7 +13,7 @@
 #import "MaskViewController.h"
 #import "MaskViewController.h"
 #import "EmitterListTableViewController.h"
-#import "ReplicatorViewController.h"
+#import "ReplicatorLIstTableViewController.h"
 
 
 static NSString *const cellIdentifier = @"cellIdentifier";
@@ -80,7 +80,7 @@ static NSString *const cellIdentifier = @"cellIdentifier";
     }else if (indexPath.row == 4){
         [self pushToEmitterList];
     }else if (indexPath.row == 5){
-        [self pushToReplicatorVC];
+        [self pushToReplicatorListVC];
     }
         
 }
@@ -120,8 +120,8 @@ static NSString *const cellIdentifier = @"cellIdentifier";
     EmitterListTableViewController *vc  =[self.storyboard instantiateViewControllerWithIdentifier:@"EmitterListTableViewController"];
     [self.navigationController pushViewController:vc animated:YES];
 }
-- (void)pushToReplicatorVC{
-    ReplicatorViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ReplicatorViewController"];
+- (void)pushToReplicatorListVC{
+    ReplicatorLIstTableViewController *vc = [[ReplicatorLIstTableViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

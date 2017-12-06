@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, RpUse){
+    RpUseAnimation,
+    RpUseTransform,
+    RpUseSubRp
+};
+
 @interface ReplicatorViewController : UIViewController
+
+@property (nonatomic, assign) RpUse useType;
 
 @end

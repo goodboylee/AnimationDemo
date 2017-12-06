@@ -30,6 +30,7 @@
 		AD5F6B7D1FCFDF8300FE586F /* robot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD5F6B7C1FCFDF8300FE586F /* robot.jpg */; };
 		AD5F6B801FCFF6F000FE586F /* bgTransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5F6B7E1FCFF6EF00FE586F /* bgTransparent.png */; };
 		AD5F6B811FCFF6F000FE586F /* bgNonTransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5F6B7F1FCFF6F000FE586F /* bgNonTransparent.png */; };
+		AD85F5E01FD7BCFE009FD16C /* ReplicatorLIstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD85F5DF1FD7BCFE009FD16C /* ReplicatorLIstTableViewController.m */; };
 		ADB472951FD0E09F00E1FC21 /* robotMan.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB472941FD0E09E00E1FC21 /* robotMan.png */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,8 @@
 		AD5F6B7C1FCFDF8300FE586F /* robot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = robot.jpg; sourceTree = "<group>"; };
 		AD5F6B7E1FCFF6EF00FE586F /* bgTransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgTransparent.png; sourceTree = "<group>"; };
 		AD5F6B7F1FCFF6F000FE586F /* bgNonTransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgNonTransparent.png; sourceTree = "<group>"; };
+		AD85F5DE1FD7BCFE009FD16C /* ReplicatorLIstTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReplicatorLIstTableViewController.h; sourceTree = "<group>"; };
+		AD85F5DF1FD7BCFE009FD16C /* ReplicatorLIstTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReplicatorLIstTableViewController.m; sourceTree = "<group>"; };
 		ADB472941FD0E09E00E1FC21 /* robotMan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotMan.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +94,8 @@
 		99E36ECB1FD70D8C00635BEA /* CAReplicatorLayer */ = {
 			isa = PBXGroup;
 			children = (
+				AD85F5DE1FD7BCFE009FD16C /* ReplicatorLIstTableViewController.h */,
+				AD85F5DF1FD7BCFE009FD16C /* ReplicatorLIstTableViewController.m */,
 				99E36ECC1FD70DD800635BEA /* ReplicatorViewController.h */,
 				99E36ECD1FD70DD800635BEA /* ReplicatorViewController.m */,
 			);
@@ -279,6 +284,7 @@
 				AD55D1F01FCEAF15008AB9A1 /* GradientExampleViewController.m in Sources */,
 				AD415B501FD62D3F00F837B3 /* EmitterDetailViewController.m in Sources */,
 				AD1DB7071FCD5AFA00791801 /* GradientViewController.m in Sources */,
+				AD85F5E01FD7BCFE009FD16C /* ReplicatorLIstTableViewController.m in Sources */,
 				AD464E171FA1B92500A81714 /* main.m in Sources */,
 				AD27B80C1FCBA41B003270B4 /* DiagramView.m in Sources */,
 				AD1DB70A1FCD7E1000791801 /* GradientNExtViewController.m in Sources */,

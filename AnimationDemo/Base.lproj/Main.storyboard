@@ -301,7 +301,7 @@
                                     <constraint firstAttribute="height" constant="1" id="EQa-rf-p8c"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sky" translatesAutoresizingMaskIntoConstraints="NO" id="FMI-od-sUd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FMI-od-sUd">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="vW5-gc-vDT">
@@ -831,7 +831,6 @@
         <image name="2" width="500" height="372"/>
         <image name="beauty" width="200" height="200"/>
         <image name="rocket" width="40" height="40"/>
-        <image name="sky" width="325" height="500"/>
         <image name="sun" width="50" height="50"/>
     </resources>
 </document>
